@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    background-color: #d1cbcb;
+}
+
+.nav-menu{
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: rgb(110, 128, 235);
+}
+
+.nav-menu a{
+    display: inline-block;
+    height:20px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    background-color:  rgb(252, 195, 11);
+    color: black;
+    }
+.nav-menu a:active {
+    background-color: #ddd;
+    color: black;
+    }
+.title-cal{
+    margin-top:65px;
+    margin-bottom: 12px;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: 660px 240px minmax(auto,320px);
+    column-gap: 15px;
+    margin-bottom: 12px;
+}
+
+.weather-month-calendar{
+
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-gap: 1px;
+}
+.week-day{
+    display: flex;
+    justify-content: space-around;
+}
+.month-calendar-item{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(189, 236, 150, 0.1);
+    height:80px;
+    font-size: 15px;
+    margin:0;
+}
+.weather-month-calendar .month-calendar-item{
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+}
+.wheather-type-icon{
+    display: flex;
+    font-style: normal;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 21px;
+    width: 55px;
+}
+.temp{
+    align-self: flex-end;
+    margin-top: auto;
+    text-align: right;
+    line-height: 15px;
+}
+.cities{
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    column-gap: 5px;;
+}
+.cities-col{
+    display:flex;
+    flex-direction: column;
+}
+.cities-col a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: blue;
+    text-decoration: none;
+}
+
+.list-ads{
+    display:flex;
+    flex-direction: column;
+    margin-top:15px;
+}
+.widget-ads{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    height:200px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.ads-img{
+    height: 60%;
+    width:100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.ads-title{
+    background: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 40%;
+    width:100%;
+    top:50%;
+}
+
+@media screen and (max-width: 1000px) {
+    .weather-month-calendar{
+        align-self: center;
+        width:700px;
+        margin-left:10%
+    }
+    .container{
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    .list-ads{
+        display:flex;
+        flex-direction: row;
+    }
+    .list-ads .widget-ads{
+        height: 150px;
+        width:170px
+    }
+}
+footer{
+    display: grid;
+    background-color: white;
+    gap: 5px 5px;
+    row-gap: 1 span 3;
+    grid-template-columns: repeat(4, 1fr);
+    width:100%;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    
+}
+.footer-col h1{
+    font-size: 28px;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: orange;
+}

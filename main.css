@@ -1,0 +1,33 @@
+
+.nav-menu{
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: rgb(110, 128, 235);
+}
+
+.nav-menu a{
+    display: inline-block;
+    height:20px;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    background-color:  rgb(252, 195, 11);
+    color: black;
+    }
+.nav-menu a:active {
+    background-color: #ddd;
+    color: black;
+    }
+.title-cal{
+    margin-top:65px;
+    margin-bottom: 12px;
+
+}
