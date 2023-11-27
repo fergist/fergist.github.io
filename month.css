@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    background-color: #d1cbcb;
+    background-color: #e4dede;
+    font-family: 'Roboto', sans-serif;
 }
 
 .nav-menu{
@@ -104,10 +105,33 @@ body{
     text-decoration: none;
 }
 
+
+.wrap { width: 1024px; margin: 0 auto 20px; padding: 50px 10px; }
+.wrap > div { margin-bottom: 30px; }
+	.wrap > div .containerc + .containerc { margin-left: 50px; }
+
+.flex {  display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+/* content */
+.containerc { width: 300px; height: 420px; position: relative; border: solid 1px #dedede; border-radius: 15px; -webkit-box-shadow: 0 2px 0 0 rgba(0,0,0,0.04); box-shadow: 0 2px 0 0 rgba(0,0,0,0.04); background: #fff; }
+
+.viewport { overflow: hidden; position: absolute; left: 19px; right: 9px; top: 7px; bottom: 7px; }
+.content-box { height: 100%; position: absolute; left: 0; right: -17px; overflow-y: scroll; }
+.content-list { padding: 0 20px 0 5px; -webkit-user-select: none; user-select: none; }
+	.content-list li + li { margin-top: 10px; }
+
+/* scroll bar */
+.scrollbar, .scroller { width: 4px; position: absolute; top: 0; }
+.scrollbar { right: 0; bottom: 0; }
+.scroller { left: 0; border-radius: 2px; background: #ccc; cursor: pointer; }
+
+/* Hacks */
+_:-ms-input-placeholder, :root .content-list { padding-left: 20px; }
 .list-ads{
     display:flex;
     flex-direction: column;
     margin-top:15px;
+    position: relative;
 }
 .widget-ads{
     position: relative;
@@ -131,7 +155,29 @@ body{
     width:100%;
     top:50%;
 }
-
+.meteo-holder{
+    background: #fff;
+    border-radius: 9px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.meteo-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.meteo-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.meteo-item{
+    display:flex;
+    flex-direction: column;
+}
 @media screen and (max-width: 1000px) {
     .weather-month-calendar{
         align-self: center;
@@ -142,7 +188,7 @@ body{
         grid-template-columns: 100%;
         justify-content: center;
     }
-    .list-ads{
+    .container > .list-ads{
         display:flex;
         flex-direction: row;
     }
