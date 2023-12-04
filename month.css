@@ -99,10 +99,31 @@ body{
     flex-direction: column;
 }
 .cities-col a{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
     color: blue;
     text-decoration: none;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border:none;
+    width: 80px;
+    height: 15px;
+}
+@keyframes btn-blue{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: rgba(240, 17, 229, 0.808);
+    }
+}
+.cities-col a:hover{
+    animation-name: btn-blue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 
@@ -179,6 +200,14 @@ _:-ms-input-placeholder, :root .content-list { padding-left: 20px; }
     flex-direction: column;
 }
 @media screen and (max-width: 1000px) {
+    body{
+        font-size: 25px;
+    }
+    .cities-col a{
+        border-radius: 10px;
+        width: 120px;
+        height: 30px;
+    }
     .weather-month-calendar{
         align-self: center;
         width:700px;
@@ -193,8 +222,7 @@ _:-ms-input-placeholder, :root .content-list { padding-left: 20px; }
         flex-direction: row;
     }
     .list-ads .widget-ads{
-        height: 150px;
-        width:170px
+        padding-bottom: 15px;
     }
 }
 footer{

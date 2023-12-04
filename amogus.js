@@ -1,16 +1,17 @@
 function truncate(str) {
     if (str.length > 34) {
-        return str.slice(0, 34 - 1) + "…";
+        return str.slice(0, 34 - 1) + "...";
     }
     return str;
 }
 function move(){
 	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	if (viewport_width <= 1000) {
-        let textElements = document.getElementsByClassName("ads-title");
+        let textElements = document.querySelectorAll(".ads-title");
         for(let i = 0; i < textElements.length; i++){
             let originalText = textElements[i].textContent;
             textElements[i].textContent = truncate(originalText);
+			
         }
 	}
 }
@@ -36,9 +37,9 @@ window.onload = function(){
         else if (c > 0.3){ imgs[i].getElementsByTagName("img")[0].src= "cloud2.png";}
         else { imgs[i].getElementsByTagName("img")[0].src= "sun.png"; }
     }
-    move(); 
+    move();
 }
-window.addEventListener('resize', move);
+
 
 
 
