@@ -1,6 +1,6 @@
-function truncate(str, maxlength) {
-    if (str.length > maxlength) {
-        return str.slice(0, maxlength - 1) + "…";
+function truncate(str) {
+    if (str.length > 34) {
+        return str.slice(0, 34 - 1) + "…";
     }
     return str;
 }
@@ -10,8 +10,7 @@ function move(){
         let textElements = document.getElementsByClassName("ads-title");
         for(let i = 0; i < textElements.length; i++){
             let originalText = textElements[i].textContent;
-            let maxLength = 34;
-            textElements[i].textContent = truncate(originalText, maxLength);
+            textElements[i].textContent = truncate(originalText);
         }
 	}
 }
