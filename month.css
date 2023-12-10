@@ -71,6 +71,16 @@ body{
     flex-direction: column;
     line-height: 18px;
 }
+.month-calendar-item:hover{
+    animation-name: act;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes act{
+    to{
+        background-color: rgba(241, 212, 130, 0.2)
+    }
+}
 .wheather-type-icon{
     display: flex;
     font-style: normal;
