@@ -1,6 +1,6 @@
-function truncate(str) {
-    if (str.length > 34) {
-        return str.slice(0, 34 - 1) + "...";
+function truncate(str, le) {
+    if (str.length > le) {
+        return str.slice(0, le - 1) + "...";
     }
     return str;
 }
@@ -10,7 +10,15 @@ function move(){
         let textElements = document.querySelectorAll(".ads-title");
         for(let i = 0; i < textElements.length; i++){
             let originalText = textElements[i].textContent;
-            textElements[i].textContent = truncate(originalText);
+            textElements[i].textContent = truncate(originalText, 34);
+			
+        }
+	}
+	else{
+		let textElements = document.querySelectorAll(".ads-title");
+        for(let i = 0; i < textElements.length; i++){
+            let originalText = textElements[i].textContent;
+            textElements[i].textContent = truncate(originalText, 78);
 			
         }
 	}

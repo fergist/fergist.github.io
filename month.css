@@ -38,7 +38,7 @@ body{
 }
 .container{
     display: grid;
-    grid-template-columns: 660px 240px minmax(auto,320px);
+    grid-template-columns: 660px 240px;
     column-gap: 15px;
     margin-bottom: 12px;
 }
@@ -65,6 +65,7 @@ body{
     font-size: 15px;
     margin:0;
 }
+
 .weather-month-calendar .month-calendar-item{
     display: flex;
     flex-direction: column;
@@ -108,7 +109,7 @@ body{
     cursor: pointer;
     border-radius: 5px;
     border:none;
-    width: 180px;
+    width: 120px;
     height: 15px;
 }
 @keyframes btn-blue{
@@ -148,6 +149,10 @@ body{
 
 /* Hacks */
 _:-ms-input-placeholder, :root .content-list { padding-left: 20px; }
+.ads-container{
+    display:flex;
+    flex-direction: column;
+}
 .list-ads{
     display:flex;
     flex-direction: column;
@@ -199,6 +204,11 @@ _:-ms-input-placeholder, :root .content-list { padding-left: 20px; }
     display:flex;
     flex-direction: column;
 }
+.con{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 @media screen and (max-width: 1000px) {
     body{
         font-size: 25px;
@@ -217,12 +227,19 @@ _:-ms-input-placeholder, :root .content-list { padding-left: 20px; }
         grid-template-columns: 100%;
         justify-content: center;
     }
-    .container > .list-ads{
+    .con{
+        display:block;
+    }
+    .ads-container > .list-ads{
         display:flex;
         flex-direction: row;
     }
     .list-ads .widget-ads{
         padding-bottom: 15px;
+    }
+    .ads-container > .list-ads .widget-ads{
+        width: 300px;
+        margin-left: 15px;
     }
 }
 footer{
