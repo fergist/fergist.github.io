@@ -239,6 +239,7 @@ _:-ms-input-placeholder, :root .content-list { padding-left: 20px; }
     }
     .ads-container > .list-ads .widget-ads{
         width: 300px;
+        height: 250px;
         margin-left: 15px;
     }
 }
